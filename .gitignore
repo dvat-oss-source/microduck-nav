@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.so
+*.o
+*.npz
+*.mjb
+*.mp4
+*.pt
+*.onnx
+data/
+MUJOCO_LOG.TXT
+.serena/

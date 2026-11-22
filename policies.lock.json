@@ -1,0 +1,2795 @@
+{
+ "_schema": 1,
+ "_root": "paths relative to $MICRODUCK_ROOT (default ~/microduck)",
+ "_obs_slots": {
+  "base_ang_vel": [
+   0,
+   3
+  ],
+  "projected_gravity": [
+   3,
+   6
+  ],
+  "joint_pos": [
+   6,
+   20
+  ],
+  "joint_vel": [
+   20,
+   34
+  ],
+  "actions": [
+   34,
+   48
+  ],
+  "twist": [
+   48,
+   51
+  ],
+  "head_pose": [
+   51,
+   55
+  ],
+  "body_pose": [
+   55,
+   61
+  ]
+ },
+ "walk": {
+  "path": "upstream/policies/alpha_walking.onnx",
+  "kind": "walk",
+  "command_mode": "twist",
+  "source": "pollen",
+  "note": "run 441tzs6d@3750, Velocity2-Rough-Backlash; primary nav walker",
+  "md5": "2b68446b8d9a2d70a709cbd06d8b3a09",
+  "size_bytes": 793705,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "None",
+  "metadata_raw": {
+   "run_path": "None",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "velstand": {
+  "path": "upstream/policies/velstand.onnx",
+  "kind": "walk",
+  "command_mode": "twist",
+  "source": "pollen",
+  "note": "walk + stand at zero cmd (v8 Hub)",
+  "md5": "b6da32045e35d07aa986fb6cf315bee9",
+  "size_bytes": 793705,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "None",
+  "metadata_raw": {
+   "run_path": "None",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "stand": {
+  "path": "upstream/policies/alpha_stand.onnx",
+  "kind": "stand",
+  "command_mode": "zero",
+  "source": "pollen",
+  "md5": "275af7d366c53afde74fbd5e69c38d3a",
+  "size_bytes": 793705,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "None",
+  "metadata_raw": {
+   "run_path": "None",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "sitstand": {
+  "path": "upstream/policies/alpha_sitstand.onnx",
+  "kind": "sitstand",
+  "command_mode": "posture_flag",
+  "source": "pollen",
+  "ramp_s": 2.0,
+  "md5": "2947b23bc696a57a9483ece3da15657e",
+  "size_bytes": 793695,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "None",
+  "metadata_raw": {
+   "run_path": "None",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "pick": {
+  "path": "upstream/policies/alpha_ground_pick.onnx",
+  "kind": "pick",
+  "command_mode": "phase",
+  "source": "pollen",
+  "period_s": 4.0,
+  "end_phase": 0.7,
+  "duration_s": 2.8,
+  "md5": "9852e1c75ca03d3cba52cf074d1603da",
+  "size_bytes": 793685,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "None",
+  "metadata_raw": {
+   "run_path": "None",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "kick_left": {
+  "path": "upstream/policies/ball_kick_left.onnx",
+  "kind": "kick_left",
+  "command_mode": "zero",
+  "source": "pollen",
+  "duration_s": 3.0,
+  "manifest_duration_s": 0.5,
+  "needs_ball": true,
+  "md5": "501de731e5351b2dd0bed92d25fa4a6b",
+  "size_bytes": 793685,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "None",
+  "metadata_raw": {
+   "run_path": "None",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "kick_right": {
+  "path": "upstream/policies/ball_kick_right.onnx",
+  "kind": "kick_right",
+  "command_mode": "zero",
+  "source": "pollen",
+  "duration_s": 3.0,
+  "manifest_duration_s": 0.5,
+  "needs_ball": true,
+  "md5": "9695407b57e2a7f4f32edd3baaaf2958",
+  "size_bytes": 793685,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "None",
+  "metadata_raw": {
+   "run_path": "None",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "roulade": {
+  "path": "upstream/policies/roulade.onnx",
+  "kind": "roulade",
+  "command_mode": "zero",
+  "source": "pollen",
+  "duration_s": 2.0,
+  "manifest_duration_s": 1.0,
+  "md5": "74cfaeec41d50734024f774a13fb9e7c",
+  "size_bytes": 793685,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "None",
+  "metadata_raw": {
+   "run_path": "None",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "atlantis_walk": {
+  "path": "runs/finished_atlantis/walking/policy.onnx",
+  "kind": "walk",
+  "command_mode": "twist",
+  "source": "user",
+  "note": "model_9999",
+  "md5": "5e13c5035d1cca4d8cf694c998c86532",
+  "size_bytes": 793706,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "atlantis_sitstand_flat": {
+  "path": "runs/finished_atlantis/sitstand_flat/policy.onnx",
+  "kind": "sitstand",
+  "command_mode": "posture_flag",
+  "source": "user",
+  "note": "model_18499",
+  "md5": "d418b26dcac81d6445ee7c63956936ab",
+  "size_bytes": 793696,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "atlantis_sitstand_rough": {
+  "path": "runs/finished_atlantis/sitstand_rough/policy.onnx",
+  "kind": "sitstand",
+  "command_mode": "posture_flag",
+  "source": "user",
+  "note": "model_17750",
+  "md5": "c7df3543c35597303e3f96979438bfa8",
+  "size_bytes": 793696,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "atlantis_standup_flat": {
+  "path": "runs/finished_atlantis/standup_flat/policy.onnx",
+  "kind": "standup",
+  "command_mode": "zero",
+  "source": "user",
+  "note": "model_16000; starts from SIT keyframe (extra init='sit')",
+  "md5": "dcf3e735b1b5350ca5468af7316e4783",
+  "size_bytes": 793706,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "atlantis_pick_flat": {
+  "path": "runs/finished_atlantis/groundpick_flat_15000/policy.onnx",
+  "kind": "pick",
+  "command_mode": "phase",
+  "source": "user",
+  "period_s": 4.0,
+  "end_phase": 0.7,
+  "duration_s": 2.8,
+  "note": "model_15000",
+  "md5": "853813281c855f869456725aa8d8b845",
+  "size_bytes": 793686,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "atlantis_velstand_rough_wip": {
+  "path": "runs/atlantis_wip/velstand_rough_ws/2026-11-07_17-04-10_atlantis4_velstand_rough_ws_3000.onnx",
+  "kind": "walk",
+  "command_mode": "twist",
+  "source": "user",
+  "note": "WIP iter 3000 (superseded by velstand_rough)",
+  "md5": "a5f8cad4d5f527bc6bf1e5b445170ddc",
+  "size_bytes": 793706,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "velstand_flat": {
+  "path": "runs/atlantis_final/velstand_flat_ws_2999.onnx",
+  "kind": "walk",
+  "command_mode": "twist",
+  "source": "user",
+  "note": "final, iter 2999",
+  "md5": "2ddce6c90f752d42e34bb9ee1dfd2373",
+  "size_bytes": 793706,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "velstand_rough": {
+  "path": "runs/atlantis_final/velstand_rough_ws_4249.onnx",
+  "kind": "walk",
+  "command_mode": "twist",
+  "source": "user",
+  "note": "final, iter 4249",
+  "md5": "b9b8240bb8bd3b5f1fd4a2f8cc6bf6a2",
+  "size_bytes": 793706,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "kick_right_user": {
+  "path": "runs/atlantis_final/ballkick_right_15749.onnx",
+  "kind": "kick_right",
+  "command_mode": "zero",
+  "source": "user",
+  "duration_s": 3.0,
+  "needs_ball": true,
+  "note": "final, iter 15749",
+  "md5": "6f54e0976c65b00d3cdec3e177d48c47",
+  "size_bytes": 793686,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "standup_rough": {
+  "path": "runs/atlantis_final/standup_rough_partial.onnx",
+  "kind": "standup",
+  "command_mode": "zero",
+  "source": "user",
+  "note": "PARTIAL (iter <= 6750 of 15000)",
+  "md5": "192742d41c38d9bb5d1c36158eae91f5",
+  "size_bytes": 793706,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "velocity_hard": {
+  "path": "runs/atlantis_final/velocity_hard_partial_4750.onnx",
+  "kind": "walk",
+  "command_mode": "twist",
+  "source": "user",
+  "note": "Velocity-HardRough (stairs <=4 cm, slopes ~17 deg) resumed w/ curriculum reset, iter 4750; walks (terrain sweep ~ alpha_walking, slightly faster)",
+  "md5": "3e5876f2e2461459494a764e308d5111",
+  "size_bytes": 793706,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ },
+ "velocity_hard_4250": {
+  "path": "runs/atlantis_final/velocity_hard_4250.onnx",
+  "kind": "walk",
+  "command_mode": "twist",
+  "source": "user",
+  "status": "rejected",
+  "note": "DEGENERATE: collapsed to standing still (track_linear_velocity 0.018 at iter 4250, stalls on every terrain cell). Do not use.",
+  "md5": "8919a2c4e9fc00fd0fa566931ef0d5ee",
+  "size_bytes": 793706,
+  "obs_slots": {
+   "base_ang_vel": [
+    0,
+    3
+   ],
+   "projected_gravity": [
+    3,
+    6
+   ],
+   "joint_pos": [
+    6,
+    20
+   ],
+   "joint_vel": [
+    20,
+    34
+   ],
+   "actions": [
+    34,
+    48
+   ],
+   "twist": [
+    48,
+    51
+   ],
+   "head_pose": [
+    51,
+    55
+   ],
+   "body_pose": [
+    55,
+    61
+   ]
+  },
+  "input_name": "obs",
+  "obs_dim": 61,
+  "output_name": "actions",
+  "action_dim": 14,
+  "observation_names": [
+   "base_ang_vel",
+   "projected_gravity",
+   "joint_pos",
+   "joint_vel",
+   "actions",
+   "command",
+   "head_command",
+   "body_command"
+  ],
+  "command_names": [
+   "twist",
+   "head_pose",
+   "body_pose"
+  ],
+  "joint_names": [
+   "left_hip_yaw",
+   "left_hip_roll",
+   "left_hip_pitch",
+   "left_knee",
+   "left_ankle",
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll",
+   "right_hip_yaw",
+   "right_hip_roll",
+   "right_hip_pitch",
+   "right_knee",
+   "right_ankle"
+  ],
+  "default_joint_pos": [
+   0.0,
+   -0.087,
+   -0.458,
+   -0.005,
+   0.453,
+   0.349,
+   0.349,
+   0.0,
+   0.0,
+   0.0,
+   0.087,
+   0.458,
+   0.005,
+   -0.453
+  ],
+  "joint_stiffness": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "joint_damping": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "action_scale": 1.0,
+  "run_path": "local",
+  "metadata_raw": {
+   "run_path": "local",
+   "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+   "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+   "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
+   "default_joint_pos": "0.000,-0.087,-0.458,-0.005,0.453,0.349,0.349,0.000,0.000,0.000,0.087,0.458,0.005,-0.453",
+   "command_names": "twist,head_pose,body_pose",
+   "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
+   "action_scale": "1.0"
+  }
+ }
+}
